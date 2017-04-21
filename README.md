@@ -1,1 +1,1 @@
-# Practical Javascript via watchandcode.comp. A simple js todo app.
+### Practical Javascript via watchandcode.com. A simple js todo app.

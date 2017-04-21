@@ -2,27 +2,49 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>To Do List</h1>
-                <div id="list">
-                    <ul>
-                        <li>First To Do Item</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>To Do List</h1>
+      </div>
     </div>
-
-    <script src="js/script.js" charset="utf-8"></script>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <button class="btn btn-primary" onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+        <div class="form-group">
+          <input type="text" id="addTodoText" class="form-control" placeholder="Add Todo">
+          <button class="btn btn-success" onclick="handlers.addTodo()">Add Todo</button>
+        </div>
+        <div class="form-group">
+          <input type="number" id="changeTodoPosition" class="form-control" placeholder="Change Todo Position">
+          <input type="text" id="changeTodoText" class="form-control" placeholder="Change Todo">
+          <button class="btn btn-success" onclick="handlers.changeTodo()">Change Todo</button>
+        </div>
+        <div class="form-group">
+          <input type="number" id="deleteTodoPosition" class="form-control" placeholder="Delete Todo Position">
+          <button class="btn btn-danger" onclick="handlers.deleteTodo()">Delete Todos</button>
+        </div>
+        <div class="form-group">
+          <input type="number" id="toggleCompletedPosition" class="form-control" placeholder="Toggle Todo Completed">
+          <button class="btn btn-success" onclick="handlers.toggleCompleted()">Toggle Todo Completed</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-group">
+        <ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
