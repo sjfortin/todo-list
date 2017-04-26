@@ -5,46 +5,36 @@
   <meta charset="utf-8">
   <title>To Do List</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8 col-md-offset-2">
         <h1>To Do List</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <button class="btn btn-primary" onclick="handlers.toggleAll()">Toggle All</button>
-        </div>
-        <div class="form-group">
-          <input type="text" id="addTodoText" class="form-control" placeholder="Add Todo">
-          <button class="btn btn-success" onclick="handlers.addTodo()">Add Todo</button>
-        </div>
-        <div class="form-group">
-          <input type="number" id="changeTodoPosition" class="form-control" placeholder="Change Todo Position">
-          <input type="text" id="changeTodoText" class="form-control" placeholder="Change Todo">
-          <button class="btn btn-success" onclick="handlers.changeTodo()">Change Todo</button>
-        </div>
-        <div class="form-group">
-          <input type="number" id="deleteTodoPosition" class="form-control" placeholder="Delete Todo Position">
-          <button class="btn btn-danger" onclick="handlers.deleteTodo()">Delete Todos</button>
-        </div>
-        <div class="form-group">
-          <input type="number" id="toggleCompletedPosition" class="form-control" placeholder="Toggle Todo Completed">
-          <button class="btn btn-success" onclick="handlers.toggleCompleted()">Toggle Todo Completed</button>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form">
+          <div class="form-group">
+            <!-- <input type="textarea" id="addTodoText" class="form-control" placeholder="Add Todo"> -->
+            <textarea class="form-control" rows="2" id="addTodoText" placeholder="Add Todo"></textarea>
+            <button class="btn btn-primary btn-sm addTodoBtn" onclick="controllers.addTodo()">Add Todo</button>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <ul class="list-group">
-        <ul>
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Your Todos</h3>
+        <button id="toggleAll" class="btn btn-primary btn-xs toggleAll" onclick="controllers.toggleAll()">Toggle All Complete/Incomplete</button>
+        <div id="todoList"></div>
+        <div id="editForm"></div>
+        <div id="submitEditButtonDiv"></div>
       </div>
-    </div>
-  </div>
-  <script src="js/script.js" charset="utf-8"></script>
+      <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>

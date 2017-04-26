@@ -1,0 +1,100 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #50514F;
+}
+
+.addTodoBtn {
+  margin-top: 10px;
+}
+
+.todoItem {
+  padding: 15px 10px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.todoItem:nth-child(odd) {
+  background: #f8fafc;
+}
+
+.todoItem:nth-child(even) {
+  background: #e9f1f5;
+}
+
+.todoItem button {
+  margin-left: 5px;
+  float: right;
+}
+
+span.addedTodo {
+    float: left;
+}
+
+.toggleAll {
+  margin-top: 10px;
+  display: none;
+}
+
+#editForm {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.markedCompleteButton {
+  cursor: pointer;
+    margin-right: 5px;
+}
+
+.markedComplete:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  color: #70C1B3;
+}
+
+.markedComplete:hover:before {
+  color: #059cbf;
+}
+
+.markedIncomplete:before {
+  font-family: FontAwesome;
+  content: "\f00d";
+  color: #F25F5C;
+}
+
+.markedIncomplete:hover:before {
+  color: #c61917;
+}
+
+.btn-primary, .btn-primary:focus {
+  background-color: #247BA0;
+    border-color: #247BA0;
+}
+
+.btn-primary:hover {
+    background-color: #059cbf;
+    border-color: #059cbf;
+}
+
+.btn-danger, .btn-danger:focus {
+  background-color: #F25F5C;
+    border-color: #F25F5C;
+}
+
+.btn-danger:hover {
+    background-color: #c61917;
+    border-color: #c61917;
+}
+
+.btn-success, .btn-success:focus {
+  background-color: #70C1B3;
+    border-color: #70C1B3;
+}
+
+.btn-success:hover {
+    background-color: #d8b407;
+    border-color: #d8b407;
+}
