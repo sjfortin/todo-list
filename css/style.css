@@ -30,12 +30,22 @@ body {
 }
 
 span.addedTodo {
-    float: left;
+  float: left;
 }
 
 .toggleAll {
-  margin-top: 10px;
   display: none;
+  float: left;
+  margin-right: 5px;
+}
+
+#todoList {
+  clear: both;
+  overflow: hidden;
+}
+
+.clearCompleted {
+  float: left;
 }
 
 #editForm {
@@ -46,55 +56,57 @@ span.addedTodo {
 
 .markedCompleteButton {
   cursor: pointer;
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .markedComplete:before {
   font-family: FontAwesome;
-  content: "\f00c";
-  color: #70C1B3;
+  content: "\f058";
+  color: #247BA0;
+  opacity: .8;
 }
 
 .markedComplete:hover:before {
-  color: #059cbf;
+  opacity: 1;
 }
 
 .markedIncomplete:before {
   font-family: FontAwesome;
-  content: "\f00d";
+  content: "\f056";
   color: #F25F5C;
+  opacity: .3;
 }
 
 .markedIncomplete:hover:before {
-  color: #c61917;
+  opacity: .7;
 }
 
 .btn-primary, .btn-primary:focus {
-  background-color: #247BA0;
-    border-color: #247BA0;
+  background-color: #059cbf;
+  border-color: #059cbf;
 }
 
 .btn-primary:hover {
-    background-color: #059cbf;
-    border-color: #059cbf;
+  background-color: #247BA0;
+  border-color: #247BA0;
 }
 
 .btn-danger, .btn-danger:focus {
   background-color: #F25F5C;
-    border-color: #F25F5C;
+  border-color: #F25F5C;
 }
 
 .btn-danger:hover {
-    background-color: #c61917;
-    border-color: #c61917;
+  background-color: #c61917;
+  border-color: #c61917;
 }
 
 .btn-success, .btn-success:focus {
   background-color: #70C1B3;
-    border-color: #70C1B3;
+  border-color: #70C1B3;
 }
 
 .btn-success:hover {
-    background-color: #d8b407;
-    border-color: #d8b407;
+  background-color: #d8b407;
+  border-color: #d8b407;
 }

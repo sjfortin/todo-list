@@ -19,13 +19,11 @@ var model = {
   toggleAll: function() {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
-    // Get number of completed todos
     this.todos.forEach(function(todo) {
       if (todo.completed === true) {
         completedTodos++;
       }
     });
-    // If everything is true, make everything false. Else, make everything is true
     this.todos.forEach(function(todo) {
       if (completedTodos === totalTodos) {
         todo.completed = false;
@@ -41,9 +39,13 @@ var controllers = {
     model.toggleAll();
     view.displayTodos();
   },
+  clearCompleted: function() {
+    model.clearCompleted();
+    view.displayTodos();
+  },
   addTodo: function() {
     var addTodoText = document.getElementById('addTodoText');
-    if(addTodoText.value.length === 0) {
+    if (addTodoText.value.length === 0) {
       alert('Your Todo is blank! Add something :)');
     } else {
       model.addTodo(addTodoText.value);
@@ -55,7 +57,7 @@ var controllers = {
     view.displayTodos();
   },
   changeTodo: function(position, todoText) {
-    if(changeTodoText.value.length === 0) {
+    if (changeTodoText.value.length === 0) {
       alert('Your Todo is blank! Add something :)');
     } else {
       model.changeTodo(position, todoText);
@@ -92,6 +94,7 @@ var view = {
 
       if (todo.completed === true) {
         addedTodo.insertBefore(markedComplete, this.addedTodo);
+        addedTodo.insertBefore(todoNumber, this.addedTodo);
         addedTodo.insertBefore(addedTodoText, this.addedTodo);
         addedTodoText.textContent = todo.todoText;
         markedComplete.className = "markedComplete markedCompleteButton";
@@ -169,6 +172,5 @@ var view = {
     });
   }
 };
-
 
 view.setUpEventListeners();
